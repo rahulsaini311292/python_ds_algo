@@ -4,10 +4,10 @@ def b_s_iter(arr, find_val):
     mid_index = int(arr_len / 2)
     mid_value = arr[mid_index]
     itm_found = False
-
+    #if item to be found is in middle of list
     if find_val == mid_value:
         print("found")
-
+    # if item to be found is to the left of the mid item
     elif find_val < mid_value:
         for val in range(0, mid_index):
             if arr[val] == find_val:
@@ -15,7 +15,7 @@ def b_s_iter(arr, find_val):
                 itm_found = True
         if not itm_found:
             print("not found")
-
+    # if item to be found is to the right of the mid item
     elif find_val > mid_value:
         for val in range(mid_index+1,arr_len):
             if arr[val] == find_val:
